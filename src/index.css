@@ -1,0 +1,105 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --font-syne: 'Syne', sans-serif;
+  --font-outfit: 'Outfit', sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+  --color-obsidian: #050505;
+  --color-sub-surface: #0B0B0F;
+  --color-glass-panel: #111116;
+  --color-primary-uv: #7A16D9;
+  --color-vibrant-violet: #8F1CE8;
+  --color-kinetic-magenta: #D20ACD;
+  --color-neon-pink: #F018C8;
+  --color-chrome-base: #C9CBD2;
+  --color-chrome-light: #E6E7EB;
+  --color-text-pure: #F5F5F7;
+  --color-text-muted: #A7A7B0;
+  --color-wireframe-edge: #585863;
+}
+
+@layer base {
+  :root {
+    --background: #050505;
+    --foreground: #f5f5f7;
+    --card: #111116;
+    --card-foreground: #f5f5f7;
+    --primary: #8f1ce8;
+    --primary-foreground: #ffffff;
+    --secondary: #d20acd;
+    --secondary-foreground: #ffffff;
+    --muted: #0b0b0f;
+    --muted-foreground: #a7a7b0;
+    --border: rgba(201, 203, 210, 0.12);
+  }
+
+  .light {
+    --background: #f8f8fa;
+    --foreground: #131313;
+    --card: #ffffff;
+    --card-foreground: #131313;
+    --primary: #8f1ce8;
+    --primary-foreground: #ffffff;
+    --secondary: #d20acd;
+    --secondary-foreground: #ffffff;
+    --muted: #f0f0f4;
+    --muted-foreground: #6b6b78;
+    --border: rgba(0, 0, 0, 0.1);
+  }
+
+  * {
+    border-color: var(--border);
+  }
+
+  html {
+    scroll-behavior: smooth;
+    font-family: 'Outfit', sans-serif;
+  }
+
+  body {
+    background-color: var(--background);
+    color: var(--foreground);
+    min-height: 100vh;
+    overflow-x: hidden;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+}
+
+/* Cyber-Luxury Utility Classes */
+.font-syne {
+  font-family: 'Syne', sans-serif;
+}
+
+.font-outfit {
+  font-family: 'Outfit', sans-serif;
+}
+
+.font-mono-telemetry {
+  font-family: 'JetBrains Mono', monospace;
+}
+
+.obsidian-glass {
+  background: rgba(17, 17, 22, 0.75);
+  backdrop-filter: blur(24px) saturate(180%);
+  -webkit-backdrop-filter: blur(24px) saturate(180%);
+}
+
+.light-glass {
+  background: rgba(255, 255, 255, 0.82);
+  backdrop-filter: blur(20px) saturate(160%);
+  -webkit-backdrop-filter: blur(20px) saturate(160%);
+}
+
+.specular-highlight {
+  box-shadow: inset 0 1px 0 0 rgba(230, 231, 235, 0.18);
+}
+
+.uv-glow-hover:hover {
+  box-shadow: 0 0 25px -2px rgba(143, 28, 232, 0.45);
+}
+
+.kinetic-gradient {
+  background: linear-gradient(135deg, #7A16D9 0%, #8F1CE8 48%, #D20ACD 100%);
+}
